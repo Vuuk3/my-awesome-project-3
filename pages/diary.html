@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Дневник</title>
+
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+
+  <body class="page">
+    <header class="header">
+      <h1>Даниил</h1>
+    </header>
+
+    <nav class="nav">
+      <a class="nav-link" href="../index.html">Главная</a>
+      <a class="nav-link" href="projects.html">Проекты</a>
+      <a class="nav-link active" href="#">Дневник</a>
+      <a class="nav-link" href="contacts.html">Контакты</a>
+    </nav>
+
+    <div class="my-progress">
+      <h2 class="center">Мой учебный прогресс</h2>
+
+      <div class="task-list">
+        <div class="task">
+          <span>13 дек — Верстка макета сайта</span>
+          <input type="checkbox" />
+        </div>
+
+        <div class="task">
+          <span>14 дек — День рождения</span>
+          <input type="checkbox" />
+        </div>
+
+        <div class="task">
+          <span>25 дек — Подготовка к Новому году</span>
+          <input type="checkbox" />
+        </div>
+
+        <div class="task">
+          <span>31 дек — Новый год</span>
+          <input type="checkbox" />
+        </div>
+      </div>
+    </div>
+
+    <div class="courses" id="coursesList">
+      <h2 class="center">Текущие курсы</h2>
+
+      <div class="course" id="1">
+        <span>HTML/CSS</span>
+        <div class="progress"><div class="bar" style="width: 90%"></div></div>
+        <span>90%</span>
+        <button onclick="deleteNode(1)">Удалить</button>
+      </div>
+
+      <div class="course" id="2">
+        <span>JavaScript</span>
+        <div class="progress"><div class="bar" style="width: 40%"></div></div>
+        <span>40%</span>
+        <button onclick="deleteNode(2)">Удалить</button>
+      </div>
+
+      <div class="course" id="3">
+        <span>Bootstrap</span>
+        <div class="progress"><div class="bar" style="width: 20%"></div></div>
+        <span>20%</span>
+        <button onclick="deleteNode(3)">Удалить</button>
+      </div>
+
+      <div class="course" id="4">
+        <span>React</span>
+        <div class="progress"><div class="bar" style="width: 20%"></div></div>
+        <span>20%</span>
+        <button onclick="deleteNode(4)">Удалить</button>
+      </div>
+    </div>
+
+    <div class="add-note">
+      <button class="button" onclick="addNote(this)">Добавить запись</button>
+      <input type="text" placeholder="Текст записи" />
+      <input type="number" value="50" min="0" max="100" />
+    </div>
+
+    <script src="../scripts/diary.js"></script>
+  </body>
+
+  <footer class="footer">
+    <p>© 2025 Контакты</p>
+  </footer>
+</html>

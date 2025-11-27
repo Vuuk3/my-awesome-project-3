@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+
+  <body class="page">
+    <header class="header">
+      <h1>Даниил</h1>
+    </header>
+
+    <nav class="nav">
+      <a class="nav-link active" href="#">Главная</a>
+      <a class="nav-link" href="pages/projects.html">Проекты</a>
+      <a class="nav-link" href="pages/diary.html">Дневник</a>
+      <a class="nav-link" href="pages/contacts.html">Контакты</a>
+    </nav>
+
+    <div class="about">
+      <img
+        id="left"
+        src="images/profile_photo.jpg"
+        alt="Мое фото"
+        class="about-photo"
+      />
+      <div id="right" class="about-text">
+        <p>Привет! Я студент группы ЭФБО-01-24. Увлекаюсь веб-разработкой</p>
+        <a href="assets/resume.pdf" download="resume.pdf">Скачать резюме</a>
+      </div>
+    </div>
+
+    <div class="skills">
+      <h3>Мои навыки</h3>
+
+      <div class="skill">
+        <span>HTML/CSS</span>
+        <div class="progress"><div class="bar" style="width: 90%"></div></div>
+        <span>90%</span>
+      </div>
+
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="progress"><div class="bar" style="width: 40%"></div></div>
+        <span>40%</span>
+      </div>
+
+      <div class="skill">
+        <span>Bootstrap</span>
+        <div class="progress"><div class="bar" style="width: 20%"></div></div>
+        <span>20%</span>
+      </div>
+
+      <div class="skill">
+        <span>React</span>
+        <div class="progress"><div class="bar" style="width: 20%"></div></div>
+        <span>20%</span>
+      </div>
+    </div>
+
+    <div class="best-projects">
+      <h3>Лучшие проекты</h3>
+
+      <div class="projects-grid">
+        <div class="card" id="left">
+          <p>Морской бой на Django</p>
+          <a href="https://github.com/Vuuk3/Sea-battle"
+            >Ссылка на репозиторий</a
+          >
+        </div>
+        <div class="card" id="right">
+          <p>Макет сайта кошачьего приюта</p>
+          <a href="https://github.com/Vuuk3/my-awesome-project">
+            Ссылка на репозиторий
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/index.js"></script>
+  </body>
+
+  <footer class="footer">
+    <p>© 2025 Контакты</p>
+  </footer>
+</html>

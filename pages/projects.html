@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Проекты</title>
+
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/projects.css" />
+  </head>
+
+  <body class="page">
+    <header class="header">
+      <h1>Даниил</h1>
+    </header>
+
+    <nav class="nav">
+      <a class="nav-link" href="../index.html">Главная</a>
+      <a class="nav-link active" href="#">Проекты</a>
+      <a class="nav-link" href="diary.html">Дневник</a>
+      <a class="nav-link" href="contacts.html">Контакты</a>
+    </nav>
+
+    <div class="projects">
+      <h2>Мои проекты</h2>
+
+      <div class="filter-buttons">
+        <button class="button" onclick="filterProjects('all-projects')">
+          Все
+        </button>
+        <button class="button" onclick="filterProjects('HTML-CSS')">
+          HTML/CSS
+        </button>
+        <button class="button" onclick="filterProjects('React')">React</button>
+        <button class="button" onclick="filterProjects('Django')">
+          Django
+        </button>
+      </div>
+
+      <div class="project-grid">
+        <div class="project all-projects HTML-CSS hidden">
+          <button class="project-btn" data-modal="html-css-modal">
+            Макет приюта для кошек на HTML/CSS
+          </button>
+        </div>
+
+        <div class="project all-projects React hidden">
+          <button class="project-btn" data-modal="react-modal">
+            ToDo-приложение на React
+          </button>
+        </div>
+
+        <div class="project all-projects Django hidden">
+          <button class="project-btn" data-modal="django-modal">
+            Морской бой на Django
+          </button>
+        </div>
+      </div>
+
+      <!-- ==== МОДАЛЬНЫЕ ОКНА ==== -->
+
+      <!-- HTML/CSS -->
+      <div class="modal" id="html-css-modal">
+        <div class="modal-content">
+          <span class="close" data-close>&times;</span>
+          <h3>HTML/CSS</h3>
+          <img src="../images/html_project.png" alt="Скриншот проекта" />
+          <a href="https://github.com/Vuuk3/my-awesome-project"
+            >Ссылка на GitHub</a
+          >
+          <a href="https://vuuk3.github.io/my-awesome-project/">
+            Ссылка на GitHub Pages
+          </a>
+        </div>
+      </div>
+
+      <!-- React -->
+      <div class="modal" id="react-modal">
+        <div class="modal-content">
+          <span class="close" data-close>&times;</span>
+          <h3>React</h3>
+          <p>Код скоро появится</p>
+        </div>
+      </div>
+
+      <!-- Django -->
+      <div class="modal" id="django-modal">
+        <div class="modal-content">
+          <span class="close" data-close>&times;</span>
+          <h3>Django</h3>
+          <a href="https://github.com/Vuuk3/Sea-battle">Ссылка на GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="../scripts/projects.js"></script>
+  </body>
+
+  <footer class="footer">
+    <p>© 2025 Контакты</p>
+  </footer>
+</html>
