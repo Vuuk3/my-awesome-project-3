@@ -260,9 +260,15 @@ body.page {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 7%;
-  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(140px, max-content));
+  gap: 12px;
+  width: 100%;
+  padding: 0 20px;
+  justify-items: start;
+}
+
+.project {
+  text-align: left;
 }
 
 .left {
@@ -274,12 +280,14 @@ body.page {
 }
 
 .project-btn {
+  display: inline-block;
   width: 100%;
   padding: 10px;
   border: 1px solid #5a86ff;
   background: white;
   cursor: pointer;
   border-radius: 6px;
+  white-space: nowrap;
 }
 
 .project-btn:hover {
@@ -355,14 +363,6 @@ body.page {
     padding-bottom: 40px;
   }
 
-  .project-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .projects {
-    margin-bottom: 30px;
-  }
-
   .about-photo {
     width: 150px;
     border-right: none;
@@ -378,6 +378,20 @@ body.page {
     display: block;
   }
 }
+
+@media (max-width: 710px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+  }
+
+  .project-btn {
+    width: 70%;
+    white-space: normal;
+    word-break: keep-all;
+  }
+}
+
 @media (max-width: 700px) {
   .skills {
     padding: 15px;
@@ -403,11 +417,26 @@ body.page {
 
 @media (max-width: 320px) {
   .nav {
-    max-width: 200px;
+    max-width: 320px;
     grid-template-areas:
       "a"
       "b"
       "c"
       "d";
+  }
+}
+
+@media (max-width: 368px) {
+  .filter-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 14px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 300px) {
+  .filter-buttons {
+    grid-template-columns: 1fr;
   }
 }
